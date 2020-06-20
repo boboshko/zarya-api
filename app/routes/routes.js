@@ -8,7 +8,7 @@ const auth = require('../data/auth');
 const router = express.Router();
 
 // Path to the home page
-router.get(config.urlServer, function(req, res) {
+router.get(config.urlServer, (req, res) => {
   res.send(text.server);
 });
 
@@ -16,16 +16,16 @@ router.get(config.urlServer, function(req, res) {
 router.get(config.urlRequest, auth.auth, sensorsData.all);
 
 // Find the the entry by ID (GET)
-router.get(config.urlRequest+config.urlID, auth.auth, sensorsData.findById);
+router.get(config.urlRequest + config.urlID, auth.auth, sensorsData.findById);
 
 // Create an entry (POST)
 router.post(config.urlRequest, auth.auth, sensorsData.create);
 
 // Update an entry by ID (PUT)
-router.put(config.urlRequest+config.urlID, auth.auth, sensorsData.update);
+router.put(config.urlRequest + config.urlID, auth.auth, sensorsData.update);
 
 // Delete an entry by ID (Delete)
-router.delete(config.urlRequest+config.urlID, auth.auth, sensorsData.delete);
+router.delete(config.urlRequest + config.urlID, auth.auth, sensorsData.delete);
 
 // Export the router
 module.exports = router;

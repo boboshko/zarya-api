@@ -16,13 +16,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(routes);
 
 // DB connection
-db.connect(config.urlMongo, function(err) {
-	if (err) {
-		return console.log(err);
-	};
+db.connect(config.urlMongo, (err) => {
+  if (err) {
+    return console.log(err);
+  }
 
-	// Server’s port — 3012
-	app.listen(3012, function() {
-		console.log(text.appStart);
-	});
+  // Server’s port — 3012
+  app.listen(3012, () => {
+    console.log(text.appStart);
+  });
 });
