@@ -19,7 +19,7 @@ exports.connect = function (url, done) {
     }
 
     // Selected DB connection
-    state.db = db.db(config.dbConnect);
+    state.db = db.db(config.zaryaDbName);
     done();
   });
 };

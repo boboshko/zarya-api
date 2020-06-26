@@ -1,8 +1,6 @@
 module.exports = {
-  urlServer: process.env.urlServer,
-  urlRequest: process.env.urlRequest,
-  urlID: process.env.urlID,
-  urlMongo: process.env.urlMongo,
-  dbConnect: process.env.dbConnect,
-  collectionConnect: process.env.collectionConnect,
+  zaryaUrlMongo: process.env.zaryaUrlMongo,
+  zaryaDbName: process.env.zaryaDbName,
+  zaryaCollectionName: process.env.zaryaCollectionName,
+  zaryaPort: process.env.zaryaPort,
 };

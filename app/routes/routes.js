@@ -1,6 +1,4 @@
 const express = require('express');
-const config = require('../config/config');
-const text = require('../config/text');
 const sensorsData = require('../controllers/sensors');
 const auth = require('../data/auth');
 
@@ -8,24 +6,27 @@ const auth = require('../data/auth');
 const router = express.Router();
 
 // Path to the home page
-router.get(config.urlServer, (req, res) => {
-  res.send(text.server);
+router.get('/zarya', (req, res) => {
+  res.send('Zarya API is running');
 });
 
 // All entries (GET)
-router.get(config.urlRequest, auth.auth, sensorsData.all);
+router.get('/zarya/read/all', auth.auth, sensorsData.all);
+
+// Get the last document (GET)
+router.get('/zarya/read/last', auth.auth, sensorsData.last);
 
 // Find the the entry by ID (GET)
-router.get(config.urlRequest + config.urlID, auth.auth, sensorsData.findById);
+router.get('/zarya/read/:id', auth.auth, sensorsData.findById);
 
 // Create an entry (POST)
-router.post(config.urlRequest, auth.auth, sensorsData.create);
+router.post('/zarya/add', auth.auth, sensorsData.create);
 
 // Update an entry by ID (PUT)
-router.put(config.urlRequest + config.urlID, auth.auth, sensorsData.update);
+router.put('/zarya/edit/:id', auth.auth, sensorsData.update);
 
-// Delete an entry by ID (Delete)
-router.delete(config.urlRequest + config.urlID, auth.auth, sensorsData.delete);
+// Delete an entry by ID (DELETE)
+router.delete('/zarya/delete/:id', auth.auth, sensorsData.delete);
 
 // Export the router
 module.exports = router;

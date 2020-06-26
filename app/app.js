@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./data/db');
 const config = require('./config/config');
-const text = require('./config/text');
 const routes = require('./routes/routes');
 
 // Server init
@@ -16,13 +15,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(routes);
 
 // DB connection
-db.connect(config.urlMongo, (err) => {
+db.connect(config.zaryaUrlMongo, (err) => {
   if (err) {
     return console.log(err);
   }
 
-  // Server’s port — 3012
-  app.listen(3012, () => {
-    console.log(text.appStart);
+  // Listen to port
+  app.listen(config.zaryaPort, () => {
+    console.log(`Zarya API has started on port ${config.zaryaPort}.`);
   });
 });

@@ -4,9 +4,9 @@ const config = require('../config/config');
 require('../data/model');
 
 // Connect validation scheme for incoming data
-const SensorsSchema = mongoose.model(config.collectionConnect);
+const SensorsSchema = mongoose.model(config.zaryaCollectionName);
 
-// All entries (GET)
+// Get all documents (GET)
 exports.all = function (req, res) {
   Sensors.all((err, docs) => {
     if (err) {
@@ -14,6 +14,17 @@ exports.all = function (req, res) {
       return res.sendStatus(500);
     }
     res.send(docs);
+  });
+};
+
+// Get the last document (GET)
+exports.last = function (req, res) {
+  Sensors.last((err, doc) => {
+    if (err) {
+      console.log(err);
+      return res.sendStatus(500);
+    }
+    res.send(doc);
   });
 };
 
