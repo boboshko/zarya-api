@@ -1,6 +1,6 @@
 {
   "name": "meteostations-API",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A small API on Node JS that allows you to receive data from Iskra JS and write it to Mongo DB",
   "main": "start.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.6.9"
+    "mongoose": "^5.9.20"
   },
   "devDependencies": {
     "eslint": "7.2.0",
