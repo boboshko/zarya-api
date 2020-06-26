@@ -2,13 +2,13 @@ const basicAuth = require('express-basic-auth');
 
 // Login and password to auth the requests
 // Change that for your own values
-const iskraJSuser = { 'yourSecretLogin': 'yourSecretPSWD' };
+const zaryaUsers = { yourSecretLogin: 'yourSecretPSWD' };
 
 // HTTP client auth
 exports.auth = basicAuth({
-    users: iskraJSuser,
+  users: zaryaUsers,
 
-    // Browser auth by URL-request
-    // Better keep a default value here
-    challenge: false
+  // Browser auth by URL-request
+  // Better keep a default value here
+  challenge: false,
 });
