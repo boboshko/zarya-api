@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.2.0-brightgreen.svg?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.2.1-brightgreen.svg?style=flat-square)
 [![Community Chat](https://img.shields.io/badge/Community-Chat-blueChat?style=flat-square&logo=telegram)](https://t.me/codeque)
 
 # Zarya API
