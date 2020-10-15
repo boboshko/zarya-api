@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/version-0.2.1-brightgreen.svg?style=flat-square)
+![Version](https://img.shields.io/badge/version-0.2.2-brightgreen.svg?style=flat-square)
 [![Community Chat](https://img.shields.io/badge/Community-Chat-blueChat?style=flat-square&logo=telegram)](https://t.me/codeque)
 
 # Zarya API
@@ -57,7 +57,7 @@ module.exports = {
 
 ### Authorizing the requests
 
-This API uses `Basic` auth via `HTTP`. Login and password are stored in the `iskraJSuser` variable in `app/data/auth.js`.
+This API uses `Basic` auth via `HTTP`. Login and password are stored in the `zaryaUsers` variable in `app/data/auth.js`.
 
 You can choose more complex login/password pair, for sure:
 
