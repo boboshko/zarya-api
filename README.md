@@ -57,7 +57,7 @@ module.exports = {
 
 ### Authorizing the requests
 
-This API uses `Basic` auth via `HTTP`. Login and password are stored in the `iskraJSuser` variable in `app/data/auth.js`.
+This API uses `Basic` auth via `HTTP`. Login and password are stored in the `zaryaUsers` variable in `app/data/auth.js`.
 
 You can choose more complex login/password pair, for sure:
 
