@@ -12,8 +12,8 @@
   "author": "Semeon Boboshko <semeonboboshko+github@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.17.1",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "express-basic-auth": "^1.2.0",
     "mongodb": "^3.2.7",
     "mongoose": "^5.9.20"
