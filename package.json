@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-basic-auth": "^1.2.0",
     "mongodb": "^3.2.7",
     "mongoose": "^5.9.20"
