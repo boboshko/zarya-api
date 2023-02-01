@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "express-basic-auth": "^1.2.0",
     "mongodb": "^3.2.7",
-    "mongoose": "^5.9.20"
+    "mongoose": "^5.13.15"
   },
   "devDependencies": {
     "eslint": "7.2.0",
